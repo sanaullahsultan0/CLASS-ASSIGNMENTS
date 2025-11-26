@@ -1,0 +1,39 @@
+#include <iostream>
+#include <iomanip> 
+using namespace std;
+
+int main() {
+    float num1, num2;
+
+     cout << "Enter the first floating point number"<<endl;
+     cin >> num1;
+     cout << "Enter the second floating point number: "<<endl;
+     cin >> num2; 
+     
+     cout <<fixed<< setprecision(3) <<endl;//used to controll floating output value
+     cout << "\n--- Floating Point ---\n"<<endl;
+     cout << "Sum: " << num1 + num2 <<setprecision(3) <<endl;
+     cout << "Difference: " << num1 - num2<<setprecision(3) <<endl;
+     cout << "Product: " << num1 * num2<<setprecision(3) <<endl;
+     cout << "Quotient: " << num1 / num2<<setprecision(3) <<endl;
+
+     // CASTING NUMBERS
+     int int_num1 = static_cast<int>(num1);
+     int int_num2 = static_cast<int>(num2); 
+     cout << "\n--- Integer ---\n"<<endl;
+     cout << "Sum: " << int_num1 + int_num2<<endl;
+     cout << "Difference: " << int_num1 - int_num2 <<endl;
+     cout << "Product: " << int_num1 * int_num2 << endl;
+     cout << "Quotient: " << int_num1 / int_num2 << endl;
+
+     
+     //   difference in outputs
+      //When casting floating-point numbers to integers, the decimal part will not count or showned
+     
+     //f2025-1142 SANAULLAH 
+     
+     // .000 for the integer results because the values themselves are now whole numbers
+    
+
+     return 0;
+}
