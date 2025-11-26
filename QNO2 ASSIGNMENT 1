@@ -1,0 +1,37 @@
+#include <iostream>
+#include <iomanip> // Required for setw
+using namespace std ;
+int main() {
+    double s1, s2, s3, s4, s5;
+     cout << "Enter marks for 5 subjects (out of 100 each):" <<endl;
+     cin >> s1 >> s2 >> s3 >> s4 >> s5;
+
+    double total_marks = s1 + s2 + s3 + s4 + s5;
+    double percentage = (total_marks / 500.0) * 100.0;
+    char grade;
+
+    if (percentage >= 90) {
+        grade = 'A+'; 
+    } else if (percentage >= 80) {
+        grade = 'A';
+    } else if (percentage >= 70) {
+        grade = 'B';
+    } else if (percentage >= 60) {
+        grade = 'C';
+    } else if (percentage >= 50) {
+        grade = 'D';
+    } else {
+        grade = 'F';
+    }
+
+    
+    std::string status = (percentage >= 50) ? "PASSED" : "FAILED";
+     cout << std::endl << "--- RESULT CARD ---" << endl;
+     cout << std::setw(20) << std::left << "Total Marks:" << setw(10) << right << total_marks << "/500" <<endl;
+     cout << std::setw(20) << std::left << "Percentage:" << setw(10) << right << fixed << setprecision(2) << percentage << "%" <<endl;
+     cout << std::setw(20) << std::left << "Grade:" << setw(10) << right << grade << endl;
+     cout << std::setw(20) << std::left << "Status:" << setw(10) << right << status <<endl;
+     cout << "_____________________-" << endl;
+
+    return 0;
+}
